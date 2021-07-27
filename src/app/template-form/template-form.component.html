@@ -1,0 +1,31 @@
+
+<div class="container">
+<form #addForm="ngForm" (ngSubmit)="addDevice(addForm)" >
+    <div class="from-group">
+        <label for="deviceName">Device Name:</label>
+        <input class="ml-3" type="text"  name="name" id="device-name" ngModel>
+    </div>
+
+    <div class="from-group">
+            <label for="deviceBrand">Brand:</label>
+            <input class="ml-3" type="text"  name="brand" id="device-brand" ngModel>
+
+    </div>
+    <div class="from-group">
+            <label for="Model">Model:</label>
+            <input class="ml-2" type="text"  name="model" id="device-model"ngModel>
+
+    </div>
+    <div class="from-group">
+            <label for="Year">Year:</label>
+            <input class="ml-4" type="text"  name="year" id="device-year"ngModel>
+
+    </div>
+    <div class="from-group">
+            <label for="Serial">Serial:</label>
+            <input class="ml-3" type="text"  name="serial" id="device-serial"ngModel>
+
+    </div>
+    <button class="ml-3"  type="submit" class="btn btn-primary">Add Device</button>
+</form>
+</div>

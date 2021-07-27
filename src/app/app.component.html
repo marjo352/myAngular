@@ -1,0 +1,48 @@
+
+<!-- commment out later -->
+
+   
+<p class="ml-5 mt-3">{{title}}</p>
+
+<h1 class="ml-5 ">Device Details view</h1> 
+
+<div *ngIf="!showUpdate">
+    <div *ngFor ="let device of devices">
+        <app-device-details 
+        [deviceDetail]="device"
+        (updateDetail)="updateDevice($event)">
+        </app-device-details>
+    </div>
+
+</div>
+<div *ngIf ="showUpdate">
+    <app-reactive-form 
+    [device]="newDevice"
+    (update)="updateDisplay($event)">
+    ></app-reactive-form>
+</div>
+
+
+
+<!-- -----------------------------------------========================================== -->
+<!-- <h6 class="ml-5">Device Details view</h6> <br> -->
+<!-- <app-first (firstEvent)="appEvent($event)"></app-first>
+<app-seconds [secondMessage]="appMessage"></app-seconds> -->
+
+<!-- 
+<p>Count: {{count}}</p>
+<p> <button (click)="addCount()">Add Count</button> </p>
+<p> <button (click)="subCount()">Sub Count</button> </p>
+
+<app-seconds *ngIf= " count > 5"></app-seconds> -->
+<!-- <h1>Device Details view</h1> -->
+<!-- <div *ngFor="let device of devices">
+    <app-device-details [deviceDetail]="device"></app-device-details>
+</div>
+ 
+
+ 
+<app-template-form (deviceAdd)="addedDevice($event)"></app-template-form> -->
+
+
+<router-outlet></router-outlet> 

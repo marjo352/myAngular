@@ -1,0 +1,33 @@
+
+
+
+
+<div class="row">
+    <div class="col-sm-6">
+      <div class="card">
+        <div class="card-body">
+            <form [formGroup] ="updateForm" (ngSubmit) ="updateDevice()">
+                <label class="ml-3 " for="name">Device Name: </label>
+                <input  formControlName="name" type="text" id="name">
+                <br>
+                <label class="ml-3" for="brand">Brand: </label>
+                <input formControlName="brand" type="text" id="brand">
+                <br>
+                <label class="ml-3" for="model">Model: </label>
+                <input formControlName="model" type="text" id="model">
+                <br>
+                <label class="ml-3" for="year">Year: </label>
+                <input formControlName="year" type="text" id="year">
+                <br>
+                <label class="ml-3" for="serial">Serial: </label>
+                <input formControlName="serial" type="text" id="serial">
+                <br>
+                <button  class="ml-3 btn btn-primary" type="submit">Submit</button>
+            
+            </form>
+
+        </div>
+      </div>
+    </div>
+    
+  </div>
